@@ -1,0 +1,128 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: thankyou path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_Thankyou
+  - action: utter_pleasure
+ 
+- story: listing PackageDetails happy path
+  steps:
+  - intent: TouristPlace_Kerala
+  - action: utter_TouristPlace_Kerala
+  - action: utter_packageDetails
+  - intent: affirm
+  - action: utter_Show_PackageDetails
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_greet
+  
+- story: did that help you happy path
+  steps:
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_greet 
+  
+- story: did that help you sad path
+  steps:
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye 
+
+  
+- story: listing PackageDetails sad path-1
+  steps:
+  - intent: TouristPlace_Kerala
+  - action: utter_TouristPlace_Kerala
+  - action: utter_packageDetails
+  - intent: deny
+  - action: utter_goodbye
+
+- story: listing PackageDetails only
+  steps:
+  - intent: Tour_Package
+  - action: utter_Show_PackageDetails
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: listing Alapuzha
+  steps:
+  - intent: get_attractions_Alappuzha
+  - action: utter_get_attractions_Alappuzha
+
+- story: listing Munnar
+  steps:
+  - intent: get_attractions_Munnar
+  - action: utter_get_attractions_Munnar
+  
+- story: listing Kochi
+  steps:
+  - intent: get_attractions_Kochi
+  - action: utter_get_attractions_Kochi
+    
+- story: listing Wayanad
+  steps:
+  - intent: get_attractions_Wayanad
+  - action: utter_get_attractions_Wayanad
+
+- story: listing Vagamon
+  steps:
+  - intent: get_attractions_Vagamon
+  - action: utter_get_attractions_Vagamon
+  
+- story: listing Kovalam
+  steps:
+  - intent: get_attractions_Kovalam
+  - action: utter_get_attractions_Kovalam
+
+- story: listing Idukki
+  steps:
+  - intent: get_attractions_Idukki
+  - action: utter_get_attractions_Idukki
+  
+- story: listing Kozhikode
+  steps:
+  - intent: get_attractions_Kozhikode
+  - action: utter_get_attractions_Kozhikode
+
+- story: listing Thekkady
+  steps:
+  - intent: get_attractions_Thekkady
+  - action: utter_get_attractions_Thekkady
+
+- story: listing Varkala
+  steps:
+  - intent: get_attractions_Varkala
+  - action: utter_get_attractions_Varkala 
+
+        
